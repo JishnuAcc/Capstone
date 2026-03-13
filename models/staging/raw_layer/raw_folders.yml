@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: supplier_rw
+    config:
+      materialized: incremental
+      unique_key: supplier_id
+      incremental_strategy: merge
+  - name: store_rw
+    config:
+      materialized: incremental
+      unique_key: store_id
+      incremental_strategy: merge
+  - name: product_rw
+    config:
+      materialized: incremental
+      unique_key: product_id
+      incremental_strategy: merge
+  - name: customer_rw
+    config:
+      materialized: incremental
+      unique_key: customer_id
+      incremental_strategy: merge
+  - name: campaign_rw
+    config:
+      materialized: incremental
+      unique_key: campaign_id
+      incremental_strategy: merge
+  - name: order_rw
+    config:
+      materialized: incremental
+      unique_key: order_id
+      incremental_strategy: merge
+  - name: employee_rw
+    config:
+      materialized: incremental
+      unique_key: employee_id
+      incremental_strategy: merge

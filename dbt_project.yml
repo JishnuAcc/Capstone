@@ -35,7 +35,18 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  my_new_project:
+  Capstone:
     # Applies to all files under models/example/
-    example:
-      +materialized: table
+    staging:
+      +schema: CP_BRONZE
+    bronze:
+      +schema: CP_BRONZE
+vars:
+  ingest_tables:
+    -supplier_data
+    -store_data
+    -product_data
+    -customer_data
+    -campaign_data
+    -orders_data
+    -employee_data

@@ -1,0 +1,45 @@
+version: 2
+
+models:
+
+  - name: br_campaign
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['campaign_id','record_date']
+
+  - name: br_supplier
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['supplier_id','record_date']
+
+  - name: br_store
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['store_id','record_date']
+
+  - name: br_product
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['product_id','record_date']
+
+  - name: br_customer
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['customer_id','record_date']
+
+  - name: br_order
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['order_id','record_date']
+
+  - name: br_employee
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['employee_id','record_date']
