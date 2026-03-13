@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw_layer
+    database: CP_RAW_DB
+    schema: CP_BRONZE
+    description: Capstone Project Data
+    tables:
+      - name: raw_json_ingest
+        columns:
+          - name: table_name
+          - name: file_name
+          - name: load_ts
+          - name: payload
+      - name: supplier_rw
+      - name: store_rw
+      - name: product_rw
+      - name: customer_rw
+      - name: campaign_rw
+      - name: order_rw
+      - name: employee_rw
