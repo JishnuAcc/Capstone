@@ -42,6 +42,8 @@ models:
       +schema: CP_BRONZE
     silver:
       +schema: CP_SILVER
+    gold:
+      +schema: CP_GOLD
 vars:
   ingest_tables:
     -supplier_data
